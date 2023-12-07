@@ -1,5 +1,6 @@
 const apiKey = "40ac864e98b34846a2e172323230512";
 const searchInput = document.querySelector("#search");
+const weather = document.querySelector(".weather");
 
 console.log(searchInput);
 console.log(searchInput.value);
@@ -11,7 +12,8 @@ async function todaysWeather(location) {
     { mode: "cors" }
   );
   const json = await response.json();
-  const data = await console.log(json);
+  const data = await json;
+  return data;
 }
 
 searchInput.addEventListener("keyup", (e) => {
