@@ -13,7 +13,7 @@ async function todaysWeather(location) {
   );
   const json = await response.json();
   const data = await json;
-  return data;
+  weather.textContent = data.current.temp_f;
 }
 
 searchInput.addEventListener("keyup", (e) => {
