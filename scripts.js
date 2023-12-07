@@ -16,7 +16,7 @@ async function todaysWeather(location) {
   console.log(data);
   const weatherLocation = document.createElement("div");
   weatherLocation.classList.add(".weatherlocal");
-  main.appendChild(weatherLocation);
+  main.insertBefore(weatherLocation, main.childNodes[2]);
   weather.textContent = data.current.temp_f;
   weatherLocation.textContent = data.location.country;
 }
