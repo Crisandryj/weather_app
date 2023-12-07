@@ -17,8 +17,9 @@ function showLocationTemp(data) {
   const weatherLocation = document.createElement("div");
   weatherLocation.classList.add(".weatherlocal");
   main.insertBefore(weatherLocation, main.childNodes[2]);
+  const country = data.location.country;
   weather.textContent = data.current.temp_f;
-  weatherLocation.textContent = data.location.country;
+  weatherLocation.textContent = country;
 }
 
 searchInput.addEventListener("keyup", (e) => {
