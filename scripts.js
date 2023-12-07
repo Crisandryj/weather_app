@@ -6,7 +6,6 @@ console.log(searchInput);
 console.log(searchInput.value);
 
 async function todaysWeather(location) {
-  console.log(location.value);
   const response = await fetch(
     `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`,
     { mode: "cors" }
