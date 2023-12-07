@@ -13,14 +13,22 @@ async function todaysWeather(location) {
   );
   const json = await response.json();
   const data = await json;
-  console.log(data);
+  showLocation(data);
+}
+
+function showLocation(info) {
   const weatherLocation = document.createElement("div");
   weatherLocation.classList.add(".weatherlocal");
   main.insertBefore(weatherLocation, main.childNodes[2]);
-  weather.textContent = data.current.temp_f;
-  weatherLocation.textContent = data.location.country;
+  weather.textContent = info.current.temp_f;
+  if (weatherLocation.textContent != "") {
+    weather.textContent = "";
+  } else {
+    weatherLocation.textContent = info.location.country;
+  }
 }
 
 searchInput.addEventListener("keyup", (e) => {
   todaysWeather(e.target.value);
+  weather.textContent = "";
 });
