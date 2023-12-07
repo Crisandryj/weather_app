@@ -3,9 +3,6 @@ const searchInput = document.querySelector("#search");
 const weather = document.querySelector(".weather");
 const main = document.querySelector("main");
 
-console.log(searchInput);
-console.log(searchInput.value);
-
 async function todaysWeather(location) {
   const response = await fetch(
     `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=no`,
@@ -13,19 +10,15 @@ async function todaysWeather(location) {
   );
   const json = await response.json();
   const data = await json;
-  showLocation(data);
+  showLocationTemp(data);
 }
 
-function showLocation(info) {
+function showLocationTemp(data) {
   const weatherLocation = document.createElement("div");
   weatherLocation.classList.add(".weatherlocal");
   main.insertBefore(weatherLocation, main.childNodes[2]);
-  weather.textContent = info.current.temp_f;
-  if (weatherLocation.textContent != "") {
-    weather.textContent = "";
-  } else {
-    weatherLocation.textContent = info.location.country;
-  }
+  weather.textContent = data.current.temp_f;
+  weatherLocation.textContent = data.location.country;
 }
 
 searchInput.addEventListener("keyup", (e) => {
