@@ -14,12 +14,12 @@ async function todaysWeather(location) {
 }
 
 function showLocationTemp(data) {
-  weatherLocation.classList.add(".weatherlocal");
+  weatherLocation.classList.add("weatherCountry");
   main.insertBefore(weatherLocation, main.childNodes[2]);
   const country = data.location.country;
   weather.textContent = data.current.temp_f;
   weatherLocation.textContent = country;
-  if (country != weatherLocation.textContent) {
+  if (weather.textContent == "") {
     weatherLocation.textContent = "";
   }
 }

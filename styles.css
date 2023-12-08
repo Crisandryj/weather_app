@@ -1,3 +1,9 @@
+h1 {
+  font-size: 40px;
+}
 .weather {
   font-size: 30px;
+}
+.weatherCountry {
+  font-size: 35px;
 }
