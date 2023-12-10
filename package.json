@@ -4,7 +4,7 @@
   "description": "- [Overview](#overview)   - [The challenge](#the-challenge) - [My process](#my-process)   - [Built with](#built-with)   - [What I learned](#what-i-learned)   - [Continued development](#continued-development)   - [Useful resources](#useful-resources) - [Author](#author) - [Acknowledgments](#acknowledgments)",
   "main": "scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Crisandryj/weather_app/issues"
   },
-  "homepage": "https://github.com/Crisandryj/weather_app#readme"
+  "homepage": "https://github.com/Crisandryj/weather_app#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
