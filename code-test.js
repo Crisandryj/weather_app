@@ -3,7 +3,7 @@ function sum(a, b) {
 }
 
 function upCase(string) {
-  return string;
+  return string.toUpperCase;
 }
 
 module.exports = upCase;
