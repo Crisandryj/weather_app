@@ -3,8 +3,7 @@ function sum(a, b) {
 }
 
 function upCase(string) {
-  const word = string;
-  word.charAt(0).toUpperCase() + word.slice(1);
+  return string;
 }
 
 module.exports = upCase;

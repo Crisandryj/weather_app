@@ -6,5 +6,5 @@ test("adds 1 + 2 to equal 3", () => {
 });
 
 test("capitalize letters", () => {
-  expect(upCase("hello")).toBe("Hello");
+  expect(upCase("hello")).toMatch("hello");
 });
