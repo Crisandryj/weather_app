@@ -1,10 +1,10 @@
-function sum(a, b) {
+sum = function sum(a, b) {
   return a + b;
-}
+};
 
-function upCase(string) {
-  return string.toUpperCase;
-}
+upCase = function upCase(string) {
+  const first = string[0].toUpperCase();
+  return first + string.slice(1);
+};
 
-module.exports = upCase;
-module.exports = sum;
+module.exports = { sum, upCase };
