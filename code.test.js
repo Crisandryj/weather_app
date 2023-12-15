@@ -28,5 +28,5 @@ test("division", () => {
 });
 
 test("cipher letters", () => {
-  expect(caesarCipher("Hello!")).toBe("Ifmmq!");
+  expect(caesarCipher("hellz", 1)).toBe("ifmma");
 });

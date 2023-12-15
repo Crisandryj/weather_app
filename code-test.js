@@ -21,6 +21,24 @@ calculator = {
   divide: (n1, n2) => n1 / n2,
   multiply: (n1, n2) => n1 * n2,
 };
+const alphabets = "0abcdefghijklmnopqrstuvwxyz".split("");
 
-caesarCipher = function caesarCipher(string) {};
+caesarCipher = function caesarCipher(string, n) {
+  const stringArry = string.split("");
+  let newString = "";
+
+  stringArry.forEach((letter) => {
+    //find letter in array
+    let index = alphabets.indexOf(letter.toLowerCase());
+    //shift letter over n times
+    //save new letter in newstring
+    if (index + n <= 26) {
+      newString += alphabets[index + n];
+    } else {
+      newString += alphabets[(index + n) % 26];
+    }
+  });
+  return newString;
+};
+
 module.exports = { sum, upCase, reverseString, calculator };
