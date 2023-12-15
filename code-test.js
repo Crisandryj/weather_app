@@ -15,10 +15,12 @@ reverseString = function reverseString(str) {
   return newString;
 };
 
-const calculator = {
+calculator = {
   add: (n1, n2) => n1 + n2,
   subtract: (n1, n2) => n1 - n2,
   divide: (n1, n2) => n1 / n2,
   multiply: (n1, n2) => n1 * n2,
 };
+
+caesarCipher = function caesarCipher(string) {};
 module.exports = { sum, upCase, reverseString, calculator };

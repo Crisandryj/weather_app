@@ -26,3 +26,7 @@ test("multiplication", () => {
 test("division", () => {
   expect(calculator.divide(2, 2)).toBe(1);
 });
+
+test("cipher letters", () => {
+  expect(caesarCipher("Hello!")).toBe("Ifmmq!");
+});
