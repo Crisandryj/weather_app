@@ -28,16 +28,22 @@ caesarCipher = function caesarCipher(string, n) {
   let newString = "";
 
   stringArry.forEach((letter) => {
+    let lowerL = letter.toLowerCase();
     //find letter in array
-    let index = alphabets.indexOf(letter.toLowerCase());
-    //shift letter over n times
-    //save new letter in newstring
-    if (index + n <= 26) {
-      newString += alphabets[index + n];
+    let index = alphabets.indexOf(lowerL);
+    if (alphabets.includes(lowerL)) {
+      if (index + n <= 26) {
+        //shift letter over n times
+        //save new letter in newstring
+        newString += alphabets[index + n];
+      } else {
+        newString += alphabets[(index + n) % 26];
+      }
     } else {
-      newString += alphabets[(index + n) % 26];
+      newString += letter;
     }
   });
+
   return newString;
 };
 
