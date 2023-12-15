@@ -15,4 +15,10 @@ reverseString = function reverseString(str) {
   return newString;
 };
 
-module.exports = { sum, upCase, reverseString };
+const calculator = {
+  add: (n1, n2) => n1 + n2,
+  subtract: (n1, n2) => n1 - n2,
+  divide: (n1, n2) => n1 / n2,
+  multiply: (n1, n2) => n1 * n2,
+};
+module.exports = { sum, upCase, reverseString, calculator };

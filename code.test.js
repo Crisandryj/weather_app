@@ -1,4 +1,4 @@
-const { upCase, sum, reverseString } = require("./code-test");
+const { upCase, sum, reverseString, calculator } = require("./code-test");
 
 test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -10,4 +10,19 @@ test("capitalize letters", () => {
 
 test("reverse string", () => {
   expect(reverseString("hello")).toBe("olleh");
+});
+
+test("addition", () => {
+  expect(calculator.add(2, 2)).toBe(4);
+});
+
+test("subtraction", () => {
+  expect(calculator.subtract(2, 2)).toBe(0);
+});
+
+test("multiplication", () => {
+  expect(calculator.multiply(2, 2)).toBe(4);
+});
+test("division", () => {
+  expect(calculator.divide(2, 2)).toBe(1);
 });
