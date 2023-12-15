@@ -7,4 +7,6 @@ upCase = function upCase(string) {
   return first + string.slice(1);
 };
 
-module.exports = { sum, upCase };
+reverseString = function reverseString() {};
+
+module.exports = { sum, upCase, reverseString };
