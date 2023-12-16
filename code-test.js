@@ -23,30 +23,6 @@ calculator = {
 };
 const alphabets = "0abcdefghijklmnopqrstuvwxyz".split("");
 
-// caesarCipher = function caesarCipher(string, n) {
-//   const stringArry = string.split("");
-//   let newString = "";
-
-//   stringArry.forEach((letter) => {
-//     let lowerL = letter.toLowerCase();
-//     //find letter in array
-//     let index = alphabets.indexOf(lowerL);
-//     if (alphabets.includes(lowerL)) {
-//       if (index + n <= 26) {
-//         //shift letter over n times
-//         //save new letter in newstring
-//         newString += alphabets[index + n];
-//       } else {
-//         newString += alphabets[(index + n) % 26];
-//       }
-//     } else {
-//       newString += letter;
-//     }
-//   });
-
-//   return newString;
-// };
-
 caesarCipher = function caesarCipher(string, n) {
   const stringArry = string.split("");
   let newString = "";
