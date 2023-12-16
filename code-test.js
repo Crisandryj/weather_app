@@ -73,10 +73,10 @@ caesarCipher = function caesarCipher(string, n) {
           } else {
             newString += alphabets[(index + n) % 26].toUpperCase();
           }
+        } else {
+          newString += letter;
         }
         break;
-      default:
-        newString += letter;
     }
   });
 
